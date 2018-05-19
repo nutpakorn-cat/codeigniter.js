@@ -13,7 +13,6 @@ const router = express.Router();
  * your_site/welcome/
  */
 router.get('/', (req, res) => {
-  req.session.test = 'Hi';
   res.render('welcome', {
     hello: 'Hi Codeigniter.js ;D'
   });

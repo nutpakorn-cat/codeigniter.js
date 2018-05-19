@@ -1,7 +1,7 @@
 {
   "name": "codeigniter.js",
   "version": "1.0.0",
-  "description": "",
+  "description": "An Express framework starter kit inspired by Codeigniter, a famous php framework.",
   "main": "index.js",
   "scripts": {
     "start": "node index"
