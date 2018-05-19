@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codeigniter.js</title>
+</head>
+
+<body style="
+    margin: 0;
+    ">
+    <div style="
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      padding-bottom: 4px;
+      background: rgba(255, 255, 255, 0.97);
+      padding-top: 5px;
+      ">
+        <h2 style="margin-top: 14px;text-align: center;">CODEIGNITER</h2>
+        <a href="https://github.com/nutpakorn-cat/codeigniter.js"><img src="GitHub-Mark-32px.png" style="
+    position: absolute;
+    top: 20px;
+    right: 239px;
+    " width="25" height="25"></a>
+    </div>
+    <div style="
+      margin-left: auto;
+      margin-right: auto;
+      width: 611px;
+      margin-top: 150px;
+      ">
+        <h1 style="font-size: 50px;margin-bottom: -4px;">Codeigniter.js Works!</h1>
+        <h2 style="
+        color: gray;
+        margin-bottom: 50px;
+        ">A quick guide to setup your application</h2>
+    </div>
+    <img src="assets-test.jpg" width="100%">
+    <p style="
+      text-align: center;
+      color: gray;
+      ">Static file works! Credit: Pixabay/Noel_Bauza</p>
+    <div style="
+      margin-left: auto;
+      margin-right: auto;
+      width: 611px;
+      line-height: 43px;
+      color: #464646;
+      ">
+        <p style="
+        font-size: 23px;
+        margin-top: 90px;
+        ">This page is loaded by Welcome_controller.js inside application/controllers/ folder.</p>
+        <p style="
+        font-size: 23px;
+        margin-top: 40px;
+        ">To get started, let's config the application ;D . Config files are inside /application/config/ There are two necessary files</p>
+        <ul style="
+        font-size: 23px;
+        line-height: 38px;
+        ">
+            <li style="
+          margin-bottom: 12px;
+          ">config.js &#8202;—&#8202; server port, static file directory, session, body-parser (built-in), render engine</li>
+            <li style="
+          ">database.js &#8202;—&#8202; all about database</li>
+        </ul>
+        <h1 style="
+        margin-bottom: 0;
+        margin-top: 67px;
+        ">Server Port</h1>
+        <p style="
+        font-size: 23px;
+        margin-top: 10px;
+        margin-bottom: 32px;
+        ">First, let's take a look with config.js and change server port.</p>
+        <div style="
+        background: rgba(0,0,0,.05);
+        font-size: 17px;
+        padding-top: 16px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 16px;
+        line-height: 40px;
+        ">
+            <pre style="
+          margin: 0;
+          ">/**
+ * Port
+ * default: 8080
+ */
+exports.port = 8080;</pre>
+        </div>
+        <h1 style="
+        margin-bottom: 0;
+        margin-top: 67px;
+        ">Static file</h1>
+        <p style="
+        font-size: 23px;
+        margin-top: 10px;
+        ">Static files (css, js, images, fonts) are inside /assets folder. The files will appear on the url for an example you have /assets/abc.jpg, so you can get it from www.yoursite.com/abc.jpg</p>
+        <div style="
+        background: rgba(0,0,0,.05);
+        font-size: 17px;
+        padding-top: 16px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 16px;
+        line-height: 40px;
+        ">
+            <pre style="
+          margin: 0;
+          ">exports.staticDir = 'assets';</pre>
+        </div>
+
+        <h1 style="
+        margin-bottom: 0;
+        margin-top: 67px;
+        ">Session</h1>
+        <p style="
+        font-size: 23px;
+        margin-top: 10px;
+        ">
+            To enable session, you have to set
+            <emp style="
+          background-color: #f2f2f2;
+          display: inline;
+          font-size: 17px;
+          line-height: 40px;
+          padding: 5px;
+          ">exports.sessionIsUse</emp>
+            equal true and don't forget to set secret key! You can use whatever key that you want. for more details, visit: <a href="https://github.com/expressjs/session" style="
+    color: green;
+    text-decoration: unset;
+">@expressjs/session</a></p>
+        <p></p>
+        <div style="
+        background: rgba(0,0,0,.05);
+        font-size: 17px;
+        padding-top: 16px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 16px;
+        line-height: 40px;
+        ">
+            <pre style="
+          margin: 0;
+          ">exports.sessionIsUse = true;
+
+exports.session = {
+  secret: 'DON'T FORGET TO SET THIS',
+  cookie: {
+    maxAge: 3600000
+  },
+  resave: false,
+  saveUninitialized: true
+};</pre>
+        </div>
+        <h1 style="
+        margin-bottom: 0;
+        margin-top: 67px;
+        ">BodyParser</h1>
+        <p style="
+        font-size: 23px;
+        margin-top: 10px;
+        ">Codeigniter.js uses built-in parser instead of body-parser, since Express 4.16 announced that they had bundled body-parser as express built-in middleware, but it's still the same as body-parser. for more details, visit: <a href="https://github.com/expressjs/body-parser"
+                style="
+    color: green;
+    text-decoration: unset;
+">@expressjs/body-parser</a>
+        </p>
+        <div style="
+        background: rgba(0,0,0,.05);
+        font-size: 17px;
+        padding-top: 16px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 16px;
+        line-height: 40px;
+        ">
+            <pre style="
+          margin: 0;
+          ">exports.expressParserIsUse = false;
+
+exports.expressParser = {
+  extended: false
+};</pre>
+        </div>
+
+        <h1 style="
+        margin-bottom: 0;
+        margin-top: 67px;
+        ">Render Engine</h1>
+        <p style="
+        font-size: 23px;
+        margin-top: 10px;
+        ">There are 30 template engines that compatible with Codeigniter.js. You can disable it if you want to make API application. Default state is enable, and default render engine is Handlebars.</p>
+        <p style="
+        font-size: 23px;
+        margin-top: 40px;
+        ">*** Don't forget to install your desired render engine before use<br> The template engines that have already installed are Handlebars and Jade.</p>
+        <div style="
+        background: rgba(0,0,0,.05);
+        font-size: 17px;
+        padding-top: 16px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 16px;
+        line-height: 40px;
+        ">
+            <pre style="
+          margin: 0;
+          ">exports.renderEngineIsUse = true;
+exports.renderEngine = 'handlebars';
+
+// Use .html extension
+exports.renderExtension = 'html';</pre>
+        </div>
+
+        <br><br>
+    </div>
+
+
+
+</body>
+
+</html>
